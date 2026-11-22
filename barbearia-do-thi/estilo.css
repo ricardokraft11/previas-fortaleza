@@ -1,0 +1,127 @@
+:root {
+  --fundo: #f4eddd;
+  --tinta: #202720;
+  --vermelho: #a93022;
+  --linha: #999681;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+}
+.wrap { width: min(1340px, calc(100% - 84px)); margin-inline: auto; }
+.cabecalho {
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: .8rem;
+  border-bottom: 1px solid var(--linha);
+}
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: .64rem;
+  width: fit-content;
+  font: 800 1.18rem/.83 var(--display);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.cidade, .rotulo, .bairros, .rodape {
+  font: 650 .71rem/1.25 ui-monospace, monospace;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+.cabecalho nav { justify-self: end; }
+.agendar {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  min-height: 44px;
+  font-size: .85rem;
+  font-weight: 680;
+}
+.agendar span, .bairros span { color: var(--vermelho); }
+.letreiro {
+  display: grid;
+  align-items: end;
+  grid-template-columns: 1fr auto;
+  gap: 0 1.5rem;
+  padding: 26px 0 23px;
+}
+.letreiro .rotulo { grid-column: 1 / -1; color: var(--vermelho); }
+.letreiro h1 {
+  font: 800 clamp(4.6rem, 11vw, 10.6rem)/.79 var(--display);
+  letter-spacing: -.018em;
+  text-transform: uppercase;
+  margin: 9px 0 0 -.03em;
+}
+.letreiro h1 span { white-space: nowrap; }
+.letreiro .ponto { color: var(--vermelho); }
+.bairros { white-space: nowrap; padding-bottom: .33rem; }
+.dupla { display: grid; grid-template-columns: 1.75fr 1fr; border: 1px solid var(--tinta); }
+.trabalho { position: relative; min-height: 100%; }
+.trabalho .photo {
+  position: absolute;
+  inset: 0;
+  object-position: 50% 39%;
+  filter: grayscale(1) contrast(1.07);
+}
+.trabalho figcaption {
+  position: absolute;
+  inset: auto auto 0 0;
+  color: var(--fundo);
+  background: var(--tinta);
+  padding: .28rem .65rem;
+}
+.unidades {
+  background: var(--tinta);
+  color: var(--fundo);
+  min-height: 440px;
+  padding: clamp(24px, 3.8vw, 55px);
+}
+.unidades .rotulo { color: #ffab99; }
+.unidades h2 {
+  max-width: 11ch;
+  margin: .48rem 0 1.6rem;
+  font: 700 clamp(2.9rem, 4.6vw, 4.2rem)/.88 var(--display);
+  text-transform: uppercase;
+}
+.enderecos { border-top: 1px solid #878778; }
+.enderecos a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: .72rem .15rem;
+  border-bottom: 1px solid #878778;
+  text-decoration: none;
+}
+.enderecos a:hover { color: #ffab99; }
+.enderecos strong { display: block; font: 700 1.65rem/1.05 var(--display); }
+.enderecos small { font-size: .72rem; }
+.seta { color: #ffab99; font-size: 1.36rem; }
+.rede { display: inline-block; margin-top: 1.2rem; font-size: .79rem; }
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: .8rem;
+  padding-block: 1.15rem;
+}
+.rodape small { font-size: inherit; text-transform: none; letter-spacing: 0; }
+@media (max-width: 860px) {
+  .wrap { width: calc(100% - 42px); }
+  .dupla { grid-template-columns: 1.3fr 1fr; }
+  .letreiro h1 { font-size: clamp(5rem, 11.6vw, 7rem); }
+}
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 32px); }
+  .cabecalho { grid-template-columns: 1fr auto; min-height: 66px; }
+  .cidade { display: none; }
+  .agendar { font-size: .76rem; }
+  .letreiro { grid-template-columns: 1fr; gap: .7rem; padding: 19px 0 13px; }
+  .letreiro h1 { font-size: clamp(4rem, 16.3vw, 6.5rem); margin-top: 0; max-width: 9ch; }
+  .bairros { padding-bottom: 0; }
+  .dupla { grid-template-columns: 1fr; }
+  .trabalho { min-height: 258px; }
+  .trabalho .photo { object-position: 50% 39%; }
+  .unidades { min-height: 0; padding: 25px 19px 23px; }
+  .unidades h2 { max-width: none; font-size: 2.7rem; margin-bottom: 1.2rem; }
+  .rodape { font-size: .64rem; }
+}

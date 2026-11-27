@@ -1,0 +1,71 @@
+:root {
+  --fundo: #1f1519;
+  --superficie: #2d1f25;
+  --tinta: #f5ebe6;
+  --suave: #c9b4b0;
+  --acento: #e0a99a;
+  --sobre: #1f1519;
+  --linha: #4a363d;
+  --display: "Instrument Serif", Georgia, serif;
+  --texto: Bricolage, system-ui;
+}
+
+.wrap { width: min(1160px, calc(100% - 72px)); margin-inline: auto; }
+.cabecalho { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 82px; border-bottom: 1px solid var(--linha); }
+.marca { display: inline-flex; align-items: center; gap: .75rem; min-width: 0; text-decoration: none; font: 700 1.35rem/1.05 var(--display); }
+.marca img { flex: none; }
+.marca small { display: block; font: 600 .66rem/1.35 var(--texto); letter-spacing: .11em; text-transform: uppercase; color: var(--acento); margin-top: .2rem; }
+nav { display: flex; align-items: center; gap: 1.7rem; }
+nav a { text-decoration: none; font-size: .88rem; color: var(--suave); }
+nav .nav-cta { background: var(--acento); color: var(--sobre); padding: .62rem 1.1rem; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+.eyebrow { font-size: .73rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); }
+.hero { display: grid; gap: clamp(2rem, 5vw, 4.4rem); align-items: center; padding-block: clamp(2.4rem, 5vw, 4.5rem); border-bottom: 1px solid var(--linha); }
+.hero.sem-foto { grid-template-columns: 1fr; }
+h1, h2, h3 { font-family: var(--display); overflow-wrap: break-word; }
+h1 { margin-top: .85rem; }
+h1 em { color: var(--acento); }
+.lead { margin-top: 1.3rem; max-width: 46ch; color: var(--suave); font-size: 1.02rem; }
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 1.8rem; }
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; background: var(--acento); color: var(--sobre); padding: .85rem 1.45rem; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: .93rem; text-align: center; }
+.cta:hover, nav .nav-cta:hover { background: var(--tinta); color: var(--fundo); }
+.link-insta, .mapa { font-size: .86rem; color: var(--suave); overflow-wrap: anywhere; }
+.moldura { overflow: hidden; background: var(--superficie); }
+.retrato figcaption { padding-top: .55rem; color: var(--suave); }
+.tratamentos { padding-block: clamp(2.6rem, 5vw, 4.4rem); border-bottom: 1px solid var(--linha); }
+.tratamentos h2, .consultorio h2 { margin-top: .55rem; max-width: 22ch; font-size: clamp(2rem, 4.2vw, 3.3rem); line-height: 1.04; }
+.itens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2.1rem; }
+.itens span { font-size: .76rem; font-weight: 700; letter-spacing: .12em; color: var(--acento); }
+.itens h3 { margin: .5rem 0; font-size: 1.6rem; line-height: 1.1; }
+.itens p { font-size: .94rem; color: var(--suave); }
+.consultorio { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-block: clamp(2.6rem, 5vw, 4rem); }
+.consultorio address { margin-top: .9rem; color: var(--suave); }
+.cons-acoes { display: flex; flex-direction: column; align-items: flex-end; gap: .8rem; }
+.rodape { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; padding-block: 1.25rem; border-top: 1px solid var(--linha); font-size: .78rem; color: var(--suave); }
+
+.hero { grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); }
+h1 { font-weight: 400; font-size: clamp(3.2rem, 6.4vw, 6rem); line-height: .96; }
+h1 em { font-style: italic; }
+h2, h3 { font-weight: 400; }
+.moldura { aspect-ratio: 4/5; border-radius: 999px; }
+.retrato figcaption { text-align: center; }
+.itens { grid-template-columns: 1fr; gap: 0; }
+.itens article { display: grid; grid-template-columns: 3rem minmax(0,1fr) minmax(0,1.3fr); gap: 1rem; align-items: baseline; padding: 1.5rem 0; border-top: 1px solid var(--linha); }
+.itens h3 { font-size: 2rem; }
+@media (max-width: 700px) { .itens article { grid-template-columns: 2.4rem minmax(0,1fr); } .itens p { grid-column: 2; } }
+
+@media (max-width: 860px) {
+  .wrap { width: calc(100% - 40px); }
+  .hero, .itens { grid-template-columns: minmax(0, 1fr); }
+  .consultorio { flex-direction: column; align-items: flex-start; }
+  .cons-acoes { align-items: flex-start; }
+}
+@media (max-width: 580px) {
+  .wrap { width: calc(100% - 32px); }
+  nav a:not(.nav-cta) { display: none; }
+  h1 { font-size: clamp(2.7rem, 13vw, 3.4rem); }
+  .marca { font-size: 1.15rem; gap: .55rem; }
+  .marca small { font-size: .58rem; letter-spacing: .07em; }
+  nav .nav-cta { padding: .6rem .85rem; }
+  .acoes .cta, .cons-acoes .cta { width: 100%; }
+  .cons-acoes { align-self: stretch; }
+}

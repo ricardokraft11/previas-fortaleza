@@ -1,0 +1,229 @@
+:root {
+  --fundo: #fcf7f4;
+  --areia: #f4e9e2;
+  --tinta: #241d1a;
+  --suave: #6f5c55;
+  --acento: #8f4a3a;
+  --oliva: #4a5142;
+  --linha: #e9dbd3;
+  --display: Bricolage, system-ui;
+  --serifa: "Instrument Serif", Georgia, serif;
+  --texto: Bricolage, system-ui;
+}
+.wrap { width: min(1080px, calc(100% - 72px)); margin-inline: auto; }
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 86px;
+}
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  text-decoration: none;
+  color: var(--tinta);
+}
+.marca .nome { font: 500 1.22rem/1.15 var(--display); letter-spacing: -.01em; }
+.marca small {
+  display: block;
+  margin-top: .25rem;
+  font: 600 .75rem/1.2 var(--texto);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+nav { display: flex; align-items: center; gap: 1.4rem; }
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  font-size: .84rem;
+  color: var(--suave);
+}
+nav a:hover { color: var(--tinta); }
+.nav-cta {
+  background: var(--tinta);
+  color: var(--fundo);
+  padding: .55rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.nav-cta:hover { background: var(--acento); color: #fff; }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(2.6rem, 5vw, 4rem);
+}
+.eyebrow {
+  font: 600 .75rem/1.45 var(--texto);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+h1 {
+  margin-top: 1.2rem;
+  font: 500 clamp(2.7rem, 5.6vw, 4.7rem)/1.02 var(--display);
+  letter-spacing: -.032em;
+  text-wrap: balance;
+}
+h1 em {
+  font: italic 400 1.06em/1 var(--serifa);
+  color: var(--acento);
+  letter-spacing: -.01em;
+}
+.lead { margin-top: 1.4rem; max-width: 44ch; font-size: 1rem; color: var(--suave); }
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.4rem; margin-top: 1.9rem; }
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--acento);
+  color: #fff;
+  padding: .9rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .88rem;
+}
+.cta:hover { background: var(--tinta); }
+.link-insta { display: inline-block; padding-block: .4rem; font-size: .84rem; color: var(--suave); }
+
+.cartao {
+  background: var(--areia);
+  border-radius: 200px 200px 10px 10px;
+  padding: 3.4rem 2rem 1.9rem;
+  text-align: center;
+}
+.cartao .selo {
+  font: italic 400 1.5rem/1.15 var(--serifa);
+  color: var(--oliva);
+}
+.cartao ul {
+  list-style: none;
+  margin: 1.3rem 0 0;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid rgba(36, 29, 26, .12);
+  display: grid;
+  gap: .75rem;
+  text-align: left;
+}
+.cartao li {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  gap: .6rem;
+  font-size: .86rem;
+  color: var(--suave);
+  line-height: 1.45;
+}
+.cartao li::before {
+  content: "—";
+  color: var(--acento);
+}
+
+.etapas { background: var(--areia); padding-block: clamp(2.6rem, 5vw, 4rem); }
+.etapas h2, .limites h2, .onde h2 {
+  margin-top: .6rem;
+  font: 500 clamp(1.8rem, 3.6vw, 2.7rem)/1.08 var(--display);
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.etapas h2 em { font: italic 400 1.05em/1 var(--serifa); color: var(--acento); }
+.grade-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin-top: 2.2rem;
+}
+.grade-3 article {
+  background: var(--fundo);
+  border-radius: 12px;
+  padding: 1.6rem 1.5rem;
+}
+.grade-3 .num {
+  font: 600 .75rem/1.4 var(--texto);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+.grade-3 h3 { margin: .85rem 0 .5rem; font: 500 1.22rem/1.15 var(--display); }
+.grade-3 p { font-size: .88rem; color: var(--suave); }
+
+.limites {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(2.6rem, 5vw, 4.2rem);
+}
+.limites .texto { display: grid; gap: 1rem; }
+.limites p { font-size: .93rem; color: var(--suave); }
+.limites blockquote {
+  margin: 0;
+  font: italic 400 1.45rem/1.25 var(--serifa);
+  color: var(--oliva);
+  border-left: 2px solid var(--acento);
+  padding-left: 1.1rem;
+}
+.aviso {
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 12px;
+  padding: 1.3rem 1.4rem;
+  font-size: .83rem;
+  line-height: 1.6;
+  color: var(--suave);
+}
+.aviso strong {
+  display: block;
+  margin-bottom: .35rem;
+  font: 600 .75rem/1.3 var(--texto);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--tinta);
+}
+
+.onde {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: end;
+  padding-block: clamp(2.4rem, 4.5vw, 3.4rem) clamp(2.6rem, 5vw, 4rem);
+  border-top: 1px solid var(--linha);
+}
+.onde address { margin-top: 1rem; font-size: .98rem; line-height: 1.65; color: var(--suave); }
+.contatos { margin-top: 1.2rem; display: grid; gap: .1rem; font-size: .88rem; }
+.contatos a { display: block; padding-block: .5rem; color: var(--tinta); }
+.contatos a:hover { color: var(--acento); }
+.onde .acoes { margin-top: 0; justify-content: flex-end; }
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  padding-block: 1.3rem 1.8rem;
+  border-top: 1px solid var(--linha);
+  font-size: .78rem;
+  color: var(--suave);
+}
+.rodape small { font-size: 1em; }
+
+@media (max-width: 900px) {
+  .wrap { width: calc(100% - 44px); }
+  .hero, .limites, .onde { grid-template-columns: 1fr; }
+  .grade-3 { grid-template-columns: 1fr; }
+  .cartao { border-radius: 160px 160px 10px 10px; padding-top: 2.8rem; }
+  .onde .acoes { justify-content: flex-start; }
+}
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 32px); }
+  nav a:not(.nav-cta) { display: none; }
+  .cabecalho { min-height: 74px; }
+  .marca .nome { font-size: 1.08rem; }
+}

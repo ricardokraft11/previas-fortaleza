@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Monograma H B">
+  <path d="M32 3l25 14.5v29L32 61 7 46.5v-29L32 3z" stroke="#b4762a" stroke-width="1.2"/>
+  <path d="M21 20v24M41 20v24M21 32h20" stroke="#14181c" stroke-width="2.6" stroke-linecap="square"/>
+  <path d="M45 44V20h6.5M45 31h5.5M45 44h7" stroke="#b4762a" stroke-width="1.6" stroke-linecap="square" opacity=".9"/>
+</svg>

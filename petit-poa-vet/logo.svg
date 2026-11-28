@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Monograma P P">
+  <rect x="3" y="3" width="58" height="58" rx="18" stroke="#3f6b4a" stroke-width="1.2"/>
+  <path d="M24 46V18h8.2c5 0 8.3 3.1 8.3 7.7 0 4.7-3.3 7.8-8.3 7.8H24" stroke="#1d2a22" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="40.5" cy="45" r="2.4" fill="#9c4f26"/>
+</svg>
